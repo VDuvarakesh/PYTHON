@@ -1,0 +1,35 @@
+import os
+import pandas as pd
+df=pd.read_excel('D:\Bot\Second\Input\Bot.xlsx')
+d1=pd.read_excel('D:\Bot\Second\Input\Bot_1.xlsx')
+print(df)
+print(d1)
+result=df
+for i in range(len(result)):
+    t=df['Tamil'][i]>d1['Tamil'][i]
+    if(t!=True):
+        result['Tamil'][i]=d1['Tamil'][i]
+    t=df['English'][i]>d1['English'][i]
+    if(t!=True):
+        result['English'][i]=d1['English'][i]
+    t=df['Maths'][i]>d1['Maths'][i]
+    if(t!=True):
+        result['Maths'][i]=d1['Maths'][i]
+    t=df['Science'][i]>d1['Science'][i]
+    if(t!=True):
+        result['Science'][i]=d1['Science'][i]
+    t=df['Social Science'][i]>d1['Social Science'][i]
+    if(t!=True):
+        result['Social Science'][i]=d1['Social Science'][i]
+result['total']=result['Tamil']+result['English']+result['Maths']+result['Science']+result['Social Science']
+print(result)
+dumppath=os. path. exists("D:\Bot\Second\Output\Dump")
+if(dumppath!=True):
+    os. makedirs("D:\Bot\Second\Output\Dump")
+paths="D:\Bot\Second\Output\Final.xlsx"
+outputpath=os.path.exists(paths)
+if(outputpath!=False):
+  os.replace("D:\Bot\Second\Output\Final.xlsx","D:\Bot\Second\Output\Dump\OldFinal.xlsx")
+output="D:\Bot\Second\Output"
+df.to_excel(output+"\Final.xlsx",index=False)
+print("Process Completed")
