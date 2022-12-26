@@ -1,0 +1,488 @@
+
+#x=int(input("Enter the number to check the prime\n"))
+#temp=0
+#for i in range(2,int(x/2)):
+#    if(x%i==0):
+#        temp=temp+1
+#if(temp==0):
+#    print("The number ",x,"is a prime number")
+#else:
+#    print("The number",x,"  is not a prime number")
+#-----------------------------------------------------------------------------------------------------------
+#leap year
+#x=int(input("Enter the year to check \n"))
+#if(x%4==0):
+#    print(x," is a leap year")
+#else:
+#    print(x," is Not a leap year")
+#-----------------------------------------------------------------------------------------------------------
+#x=int(input("Enter the number "))
+#if(x%3==0 and x%5==0):
+#    print("FizzBuzz")
+#elif(x%3==0):
+#    print ("Fizz")
+#elif(x%5==0):
+#    print("Buzz")
+#-----------------------------------------------------------------------------------------------------------
+#import collections
+#x=input("Enter the size of array ")
+#if(x.isdigit()==True):
+#    y=int(x)
+#    print("Enter the number for the array to store")
+#    a=[0]*y
+#    print("Before")
+#    print(a)
+#    for i in range(y):
+#        a[i]=int(input())
+#    print("After")
+#    print(a)
+#    a=sorted(a)
+#    print("After Sorting the Array ")
+#    print(a)
+#    print("Frequency ")
+#    frequency=collections.Counter(a)
+#    print(dict(frequency))
+#else:
+#    print(" Run Again Please Enter the Number formate in the input \n")
+#-----------------------------------------------------------------------------------------------------------
+##1.Python program to add two numbers
+#a=int(input("Enter the 1st number "))
+#b=int(input("Enter the 2nd number "))
+#Ans=a+b
+#print("The sum of two number is ",Ans)
+#-----------------------------------------------------------------------------------------------------------
+##2.Maximum of two numbers in Python
+#a=int(input("Enter the 1st number "))
+#b=int(input("Enter the 2nd number "))
+#if(a>b):
+#    print(a," is greater the ",b)
+#else:
+#    print(b," is greater the ",a)
+#-----------------------------------------------------------------------------------------------------------
+##3.Python Program for factorial of a number
+
+#a=int(input("Enter the 1st number "))
+#b=1
+#for i in range (1,a+1):
+#    b=b*i
+#print("The factorial of the given number ",a," is ",b)
+#-----------------------------------------------------------------------------------------------------------
+##4.Python Program for simple interest
+#a=int(input("Enter the Principle Amount "))
+#b=int(input("Enter the interest rate "))
+#c=int(input("Enter the Period "))
+#interest=(a*b*c)/100
+#print("Total interest is ",interest)
+#-----------------------------------------------------------------------------------------------------------
+##5.Python Program to check Armstrong Number
+#a=(input("Enter the Principle Amount "))
+#b=len(a)
+#value=0
+#for i in range(b):
+#    temp=int((a[i]))
+#    value=value+temp**b
+#if(value==int(a)):
+#    print(value," is a amstrong number")
+#else:
+#    print(value," is not a amstrong number")
+#-----------------------------------------------------------------------------------------------------------
+#6.Python program to print all Prime numbers in an Interval
+#a=int(input("Enter the Maximum value to find the  "))
+#for i in range(2,a):
+#    temp=0
+#    for j in range(2,i):
+#        if(i%j==0):
+#            temp=temp+1
+#    if(temp==0):
+#        print(i)
+#-----------------------------------------------------------------------------------------------------------
+##7.Python Program for n-th Fibonacci number
+#a=int(input("Enter the number "))
+#b=0
+#c=1
+#if(a>=1):
+#    print(b)
+#if(a>=2):
+#    print(c)
+#if(a>=3):
+#    for i in range(3,a+1):
+#        temp=c
+#        c=c+b
+#        b=temp
+#        print(c)
+#-----------------------------------------------------------------------------------------------------------
+##8.Program to print ASCII Value of a character
+#print("type exit to  break")
+#a=input("Enter the Character ")
+#while(a!="exit" and len(a)==1):
+#    print(a," the relevent ASCII value is ",ord(a))
+#    a=input()
+#-----------------------------------------------------------------------------------------------------------
+##9.
+#a=int(input("Enter the number "))
+#b=2
+#temp=0
+#while(temp<10):
+#    temp1=0
+#    for i in range(2,b):
+#        if(b%i==0):
+#            temp1=temp1+1
+#    if(temp1==0):
+#        print(b)
+#        temp=temp+1;
+#    b=b+1
+#----------------------------------------------------------------------------------------------------------- 
+##10.Python Program for Sum of squares of first n natural numbers
+#a=int(input("Enter the squares of first n natural numbers "))
+#temp=0
+#for i in range (1,a+1):
+#    #print(i*i)
+#    temp=temp+(i*i)
+#print(temp)
+#-----------------------------------------------------------------------------------------------------------
+##11.Python Program for cube sum of first n natural numbers
+#a=int(input("Enter the squares of first n natural numbers "))
+#temp=0
+#for i in range (1,a+1):
+#    #print(i*i)
+#    temp=temp+(i*i*i)
+#print(temp)
+#-----------------------------------------------------------------------------------------------------------
+##12.Python Program to find sum of array
+#a=int(input("Enter the size of Array "))
+#b=[0]*a
+#temp=0
+#for i in range(a):
+#    b[i]=int(input())
+#    temp+=b[i]
+#print("Sum of array is ",temp)
+#-----------------------------------------------------------------------------------------------------------
+##13.Python Program to find largest element in an array
+#a=int(input("Enter the size of Array "))
+#b=[0]*a
+#temp=0
+#for i in range(a):
+#    b[i]=int(input())
+#    if(i==0):
+#        temp=b[i]
+#    else:
+#        if(temp<b[i]):
+#            temp=b[i]
+#print("The maxmimum value is ",temp)
+#-----------------------------------------------------------------------------------------------------------
+##14.Python Program for array rotation
+#a=int(input("Enter the size of the Array "))
+#b=[0]*a
+#for i in range(a):
+#    b[i]=int(input())
+#print("Before rotation ",b)
+#c=[0]*a
+#t=0
+#for i in range(a-1,-1,-1):
+#    c[t]=b[i]
+#    t+=1
+#print("After rotation ",c)
+#-----------------------------------------------------------------------------------------------------------
+##15.Highest sum of pair
+#a=int(input("Enter the Array Size "))
+#find=int(input("Enter the sum to find "))
+#b=[0]*a
+#for i in range(a):
+#    b[i]=int(input())
+#n1=0
+#n2=0
+#for i in range(a-1):
+#    for j in range(i+1,a):
+#        if(find==(b[i]+b[j])):
+#            n1=i
+#            n2=j
+#            break;
+#    if(n1!=0):
+#        break;
+#print("The sum is the numbers are ",n1+1,n2+1,(b[i]+b[j]))
+#-----------------------------------------------------------------------------------------------------------
+##16.Stack in python practices
+#a=input("Enter the string to check the parenthesis  ")
+#temp=[]
+#for i in range(len(a)):
+#    if(a[i]==')' or a[i]=='(' or a[i]=='{' or a[i]=='}' or a[i]=='[' or a[i]==']'):
+#        temp.append(a[i])
+#    #print(temp)
+#    if(temp[len(temp)-1]==')' and temp[len(temp)-2]=='('):
+#        del temp[len(temp)-1]
+#        del temp[len(temp)-1]
+#    elif(temp[len(temp)-1]=='}' and temp[len(temp)-2]=='{'):
+#        del temp[len(temp)-1]
+#        del temp[len(temp)-1]
+#    elif(temp[len(temp)-1]==']' and temp[len(temp)-2]=='['):
+#        del temp[len(temp)-1]
+#        del temp[len(temp)-1]
+#if not temp:
+#    print("The given parenthesis is balanced")
+#else:
+#    print("The given parenthesis is not balanced")
+#-----------------------------------------------------------------------------------------------------------
+
+#a=input("Enter the String to Rotate in the same Position ")
+#b=a.split(' ')
+#Output=""
+#for i in range(len(b)):
+#    temp=b[i]
+#    temp=temp[::-1]
+#    Output+=temp+" "
+#print(Output)
+#-----------------------------------------------------------------------------------------------------------
+#a=input("Enter the String ")
+#a=a[::-1]
+#print(a)
+#-----------------------------------------------------------------------------------------------------------
+##Triangle pattern in python
+#a=int(input("Enter the Size of triangle "))
+#for i in range(a):
+#    for j in range(i+1):
+#         print("* ",end="")
+#    print("")
+#a=int(input("Enter the half size range "))
+#for i in range(a):
+#    for j in range((a-1)-i):
+#        print("  ",end="")
+#    for j in range(i+1):
+#        print("* ",end="")
+#    for j in range(i):
+#        print("* ",end="")
+#    print("")
+#for i in range(a):
+#    if(i>0):
+#        for j in range(i):
+#            print("  ",end="")
+#        for j in range(a-i):
+#            print("* ",end="")
+#        for j in range((a-1)-i):
+#            print("* ",end="")
+#        print("")
+#-----------------------------------------------------------------------------------------------------------
+#a=int(input("Enter the number "))
+#for i in range(1,a+1):
+#    print(i)
+#-----------------------------------------------------------------------------------------------------------
+#a=(input("Enter the number "))
+#b=(input("Enter the number "))
+#if(a.digit()):
+#    c=(a/b)
+#    print("Enter the String ",c )
+#else:
+#    print("Enter the Correct input ")
+#-----------------------------------------------------------------------------------------------------------
+##Sort the List and store in the same Variabley
+#a=int(input("Enter the list size"))
+#b=[0]*a
+#for i in range(a):
+#    b[i]=int(input())
+#print(b)
+#b=sorted(b)
+#print(b)
+#-----------------------------------------------------------------------------------------------------------
+##Reverse the Given String
+#a=input("Enter the String to Check the palindrom ")
+#b=''.join(reversed(a))
+#print("before ",a," After the reverse the String ",b)
+#-----------------------------------------------------------------------------------------------------------
+##Given an integer array arr of size s. Now, check whether 
+##there exists at least one element which is strictly smaller 
+##than all the elements on the right of it and greater than all 
+##the elements on the left of it. If it exists, return true; 
+##otherwise, return false. Ignore the corner elements of the given array.
+#a=int(input("Enter the Size of the list "))
+#b=[0]*a
+#for i in range(a):
+#    b[i]=int(input())
+#number=0
+#for i in range(1,a-1):
+#    pre=0
+#    post=0
+#    if(i>0):
+#        for j in range(i-1):
+#            if(b[j]>b[i]):
+#                pre+=1
+#        for j in range(i+1,a):
+#            if(b[j]<b[i]):
+#                post+=1
+#    if(pre==0 and post==0):
+#        number=b[i]
+#if(number!=0):
+#    print("The number is ",number)
+#else:
+#    print("False")
+#-----------------------------------------------------------------------------------------------------------
+##2) Given a read-only array arr of size s, such that each element of the 
+##array can not exceed the value s. Also, in the array, each element occurs 
+##only once except a1, which is occurring twice, and therefore, a2 is missing. 
+##Find out the value of a1 and a2. Note that read-only means any modification 
+##in the input array is not allowed.
+#a=int(input("Enter the Size of the list "))
+#b=[0]*a
+#for i in range(a):
+#    b[i]=int(input())
+#b=sorted(b);
+#missing=0;
+#repeat=0
+#for i in range(a-1):
+#    if(b[i+1]!=b[i]+1 and b[i]!=b[i+1]):
+#        missing=b[i]+1
+#    if(b[i]==b[i+1]):
+#        repeat=b[i]
+#if(missing==0):
+#    missing=b[a-1]+1
+#print("Missing number in yhe list is ",missing)
+#print("Repeated number in the list is ",repeat)
+#-----------------------------------------------------------------------------------------------------------
+#Skill test
+#def calc(x, y):
+#   return [x+y, x*y]
+#res = calc(3, 4)
+#print(res[1])
+#-----------------------------------------------------------------------------------------------------------
+#words = ("spam", "eggs", "sausages")
+#words[1] = "cheese"
+#print(words)
+#-----------------------------------------------------------------------------------------------------------
+#contacts = [
+#    ('James', 42),
+#    ('Amy', 24),
+#    ('John', 31),
+#    ('Amanda', 63),
+#    ('Bob', 18)
+#]
+#a=input()
+#temp=0
+#for i in range(len(contacts)):
+#    if a in contacts[i]:
+#        print(contacts[i][1])
+#        temp+=1
+#if(temp==0):
+#    print("Not found")
+#-----------------------------------------------------------------------------------------------------------
+#word = input()
+#t=[]
+#for i in range(len(word)):
+#    if(word[i]=='a' or word[i]=='A' or 
+#    word[i]=='e' or word[i]=='E' or
+#    word[i]=='i' or word[i]=='I' or
+#    word[i]=='o' or word[i]=='O' or
+#    word[i]=='u' or word[i]=='U'):
+#        continue
+#    else:
+#        t.append(word[i])
+#print(t)
+#-----------------------------------------------------------------------------------------------------------
+#test_str = "GeeksforGeeks"
+#all_freq = {}  
+#for i in test_str:
+#    if i in all_freq:
+#        all_freq[i] += 1
+#    else:
+#        all_freq[i] = 1
+#print ("Count of all characters in GeeksforGeeks is :\n "+  str(all_freq))
+#-----------------------------------------------------------------------------------------------------------
+#def my_func(f, arg):
+#  return f(arg)
+#print(my_func(lambda x: 2*x*x, 5))
+#-----------------------------------------------------------------------------------------------------------
+#def decor(func):
+#    def wrap(num):
+#        print("***")
+#        func(num)
+#        print("***")
+#        end()
+#    return wrap
+#@decor
+#def invoice1(num):
+#    print("INVOICE #"+num)
+#def end():
+#    print("END OF PAGE")
+#invoice1 (input())
+#-----------------------------------------------------------------------------------------------------------
+#def factorial(x):
+#    if x == 1:
+#        return 1
+#    else: 
+#        return x * factorial(x-1)
+
+#print(factorial(100))
+#-----------------------------------------------------------------------------------------------------------
+
+#def my_min(*x):
+#   return min(x)    
+#print(my_min(8, 13, 4, 42, 120, 7))
+
+
+#a=int(input("Enter the Number "))
+#print(int(a/2))
+#-----------------------------------------------------------------------------------------------------------
+
+#class Shape: 
+#    def __init__(self, w, h):
+#        self.width = w
+#        self.height = h
+
+#    def area(self):
+#        print(self.width*self.height)
+
+#class Rectangle(Shape):
+#    #your code goes here
+#    def perimeter(self):
+#        print(2*(self.width+self.height))
+
+#w = int(input())
+#h = int(input())
+
+#r = Rectangle(w, h)
+#r.area()
+#r.perimeter()
+
+#-----------------------------------------------------------------------------------------------------------
+#a=int(input("Enter the Number "))
+#for i in range(a+1):
+#    #print("  ",end="")
+#    for j in range(a-i):
+#        print(" ",end="")
+#    for j in range(i):
+#        print("*",end="")
+#    print("   ",end="")
+#    for j in range(i):
+#        print("*",end="")
+#    print()
+#print()
+#for i in range(a+1):
+#    #print("  ",end="")
+#    for j in range(i):
+#        print(" ",end="")
+#    for j in range(a-i):
+#        print("*",end="")
+#    print("   ",end="")
+#    for j in range(a-i):
+#        print("*",end="")
+#    print()
+#-----------------------------------------------------------------------------------------------------------
+#Encapsulation is define in the pyhton With the double  UnderScore 
+#class test:
+#    __Variable=11
+#    variable1=10
+#    def prin(self):
+#        return self.__Variable
+
+
+#a=test()
+#print(a.variable1)
+#print(a.prin())
+#-----------------------------------------------------------------------------------------------------------
+#Magic Method in the Python is given below
+#class Test:
+#    def __init__(self,a):
+#        self.a=a
+#    def __add__(self,other):
+#        return self.a+other.a
+#a=Test(10)
+#b=Test(5)
+#print(a+b)
+#-----------------------------------------------------------------------------------------------------------
