@@ -1,0 +1,27 @@
+import os
+import pandas as pd
+df=pd.read_excel('D:\Bot\First\Input\Bot.xlsx')
+d1=pd.read_excel('D:\Bot\First\Input\Bot_1.xlsx')
+print("Before the process")
+print(df)
+df['total']=df['Tamil']+df['English']+df['Maths']+df['Science']+df['Social Science']
+#df=df.sort_values('total', ascending=False)
+print("After the Process ")
+print(df)
+print(d1)
+#finall=pd.ExcelWriter('Final.xlsx', engine='xlsxwriter')
+#finall['Roll_No']=df['Roll_No']
+#finall['Name']=df['Name']
+#print(finall)
+
+#--creating the Dump Directory if the Folder is not present in the output folder
+dumppath=os. path. exists("D:\Bot\First\Output\Dump")
+if(dumppath!=True):
+    os. makedirs("D:\Bot\First\Output\Dump")
+paths="D:\Bot\First\Output\Final.xlsx"
+outputpath=os.path.exists(paths)
+if(outputpath!=False):
+  os.replace("D:\Bot\First\Output\Final.xlsx","D:\Bot\First\Output\Dump\OldFinal.xlsx")
+output="D:\Bot\First\Output"
+df.to_excel(output+"\Final.xlsx",index=False)
+print("Process Completed")
