@@ -1,0 +1,16 @@
+import requests
+import json
+import pymongo
+#database 
+myclient = pymongo.MongoClient("mongodb://localhost:27017")
+mydb = myclient["Python"]
+mycol=(mydb["Test"])
+#data
+url=requests.get("https://radio.garden/api/ara/content/places")
+tt=url.text
+intel=json.loads(tt)
+data=intel['data']
+
+for iterator in (data['list']):
+        print(iterator)
+        x = mycol.insert_one(iterator)
