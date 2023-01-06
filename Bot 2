@@ -1,35 +1,55 @@
 import os
+import shutil
 import pandas as pd
 df=pd.read_excel('D:\Bot\Second\Input\Bot.xlsx')
 d1=pd.read_excel('D:\Bot\Second\Input\Bot_1.xlsx')
 print(df)
 print(d1)
-result=df
+result=pd.DataFrame()
+result['Roll_No']=df['Roll_No']
+result['Name']=df['Name']
+result['Tamil']=""
+result['English']=""
+result['Maths']=""
+result['Science']=""
+result['Social Science']=""
+print(result)
 for i in range(len(result)):
-    t=df['Tamil'][i]>d1['Tamil'][i]
+    t=df['Tamil'][i]>d1['Tamil'][i]  
     if(t!=True):
         result['Tamil'][i]=d1['Tamil'][i]
+    else:
+        result['Tamil'][i]=df['Tamil'][i]
     t=df['English'][i]>d1['English'][i]
     if(t!=True):
         result['English'][i]=d1['English'][i]
+    else:
+        result['English'][i]=df['English'][i]
     t=df['Maths'][i]>d1['Maths'][i]
     if(t!=True):
         result['Maths'][i]=d1['Maths'][i]
+    else:
+        result['Maths'][i]=df['Maths'][i]
     t=df['Science'][i]>d1['Science'][i]
     if(t!=True):
         result['Science'][i]=d1['Science'][i]
+    else:
+        result['Science'][i]=df['Science'][i]
     t=df['Social Science'][i]>d1['Social Science'][i]
     if(t!=True):
         result['Social Science'][i]=d1['Social Science'][i]
+    else:
+        result['Social Science'][i]=df['Social Science'][i]
 result['total']=result['Tamil']+result['English']+result['Maths']+result['Science']+result['Social Science']
-print(result)
+result=result.sort_values('total', ascending=False)
 dumppath=os. path. exists("D:\Bot\Second\Output\Dump")
 if(dumppath!=True):
     os. makedirs("D:\Bot\Second\Output\Dump")
 paths="D:\Bot\Second\Output\Final.xlsx"
 outputpath=os.path.exists(paths)
 if(outputpath!=False):
-  os.replace("D:\Bot\Second\Output\Final.xlsx","D:\Bot\Second\Output\Dump\OldFinal.xlsx")
+  shutil.move('D:\Bot\Second\Output\Final.xlsx','D:\Bot\Second\Output\Dump\OldFinal.xlsx')
 output="D:\Bot\Second\Output"
-df.to_excel(output+"\Final.xlsx",index=False)
+result.to_excel(output+"\Final.xlsx",index=False)
+print(result)
 print("Process Completed")
