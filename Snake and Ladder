@@ -1,0 +1,50 @@
+import numpy as np
+mat=[]
+row=10
+col=10
+tt=100
+for i in range(row):
+    a=[]
+    if(i%2==0):
+        for j in range(col):
+            a.append(tt)
+            tt-=1
+    else:
+        temp=tt-9
+        for j in range(col):
+            a.append(temp)
+            temp+=1
+        tt-=10
+    
+    mat.append(a)
+current=0
+snake={17:'7',54:'34',62:'19',64:'60',87:'24',93:'73',95:'75',98:'79'}
+ladder={1:'38',4:'14',9:'31',21:'42',28:'84',51:'67',71:'91',80:'100'}
+print("Enter Exit to get out")
+print("Enter the number")
+temp=0
+while(True):
+    a=input()
+    if(a=="exit"):
+        print("Game is Quited")
+        break
+    else:
+        if(a.isdigit()==True):
+            val=int(a)
+            if(val<=6 and val>=1):
+                if(val==1):
+                    temp=1
+                if(temp==1):
+                    current=int(current) +  int(val)
+                    if current in snake.keys():
+                        tt=snake[current]
+                        current=tt
+                    if current in ladder.keys():
+                        tt=ladder[current] 
+                        current=tt
+        else:
+            print("Enter the number between 1 to 6")
+    print("Current position",current)
+    if(current==100):
+        print("Winner ")
+        break
